@@ -12,6 +12,16 @@ import RxCocoa
 import RxSwift
 import HTTPNetworking
 
+protocol GoalListViewProtocol: class {
+    func refreshData(items: [GoalListViewModel])
+}
+
+struct GoalListViewModel {
+    let title: String
+    let description: String
+    let type: String
+}
+
 class ViewController: UIViewController {
     let disposeBag = DisposeBag()
     let repository = GoalsRepository(manager: GoalsApiManager(httpClient: HTTPNetwork.instance),

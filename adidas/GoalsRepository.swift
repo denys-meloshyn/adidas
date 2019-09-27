@@ -9,13 +9,30 @@ import RxSwift
 import RxCocoa
 import CoreData
 
-class GoalsRepository {
+protocol GoalsRepositoryProtocol {
+    func loadGoals() -> Single<[GoalEntity]>
+    func fetchData() -> Single<[GoalEntity]>
+}
+
+class GoalsRepository: GoalsRepositoryProtocol {
     private let manager: GoalsApiManagerProtocol
     private let managedObjectContext: NSManagedObjectContext
 
     init(manager: GoalsApiManagerProtocol, managedObjectContext: NSManagedObjectContext) {
         self.manager = manager
         self.managedObjectContext = managedObjectContext
+    }
+
+    func fetchData() -> Single<[GoalEntity]> {
+        let fetchRequest: NSFetchRequest<Goal> = Goal.fetchRequest()
+        do {
+            let items = try managedObjectContext.fetch(fetchRequest)
+            return Single.just(items.map {
+                $0.toEntity()
+            })
+        } catch {
+            return Single.just([])
+        }
     }
 
     func loadGoals() -> Single<[GoalEntity]> {

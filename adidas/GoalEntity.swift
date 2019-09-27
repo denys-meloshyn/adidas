@@ -30,4 +30,12 @@ extension Goal {
             NSNumber(value: $0)
         }
     }
+
+    func toEntity() -> GoalEntity {
+        GoalEntity(id: id,
+                   title: title,
+                   description: descriptionSwift,
+                   type: GoalEntityType.init(rawValue: type ?? ""),
+                   goal: goal?.intValue)
+    }
 }
