@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1850D176A446B773DB8F67E4 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850DBE9A3E399DEC9BCBD79 /* GoalCell.swift */; };
 		1850D24EA63C4658AD3B67B1 /* GoalListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D6284D246C651DF7754D /* GoalListInteractor.swift */; };
 		1850D27160DDE3ED2BC76F34 /* GoalEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850DFA8A3CAA99A766E8116 /* GoalEntity.swift */; };
 		1850D2FA329609D35F4A8C1F /* GoalListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D05BCBE84159477F87A7 /* GoalListPresenter.swift */; };
@@ -40,6 +41,7 @@
 		1850D25B761D8F52757B2226 /* GoalsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsRepository.swift; sourceTree = "<group>"; };
 		1850D6284D246C651DF7754D /* GoalListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalListInteractor.swift; sourceTree = "<group>"; };
 		1850D83F51F4818E64607CE4 /* GoalApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalApiManager.swift; sourceTree = "<group>"; };
+		1850DBE9A3E399DEC9BCBD79 /* GoalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
 		1850DEDA986E2A0125E53A51 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		1850DFA8A3CAA99A766E8116 /* GoalEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalEntity.swift; sourceTree = "<group>"; };
 		20C5CE9E5E1C56BB98E96E8F /* Pods-adidasTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adidasTests.release.xcconfig"; path = "Target Support Files/Pods-adidasTests/Pods-adidasTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				1850DEDA986E2A0125E53A51 /* CoreDataStack.swift */,
 				1850D05BCBE84159477F87A7 /* GoalListPresenter.swift */,
 				1850D6284D246C651DF7754D /* GoalListInteractor.swift */,
+				1850DBE9A3E399DEC9BCBD79 /* GoalCell.swift */,
 			);
 			path = adidas;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				1850D65CBC967F3CC540DB81 /* CoreDataStack.swift in Sources */,
 				1850D2FA329609D35F4A8C1F /* GoalListPresenter.swift in Sources */,
 				1850D24EA63C4658AD3B67B1 /* GoalListInteractor.swift in Sources */,
+				1850D176A446B773DB8F67E4 /* GoalCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

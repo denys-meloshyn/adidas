@@ -13,8 +13,9 @@ class GoalListPresenter {
     private weak var view: GoalListViewProtocol?
     private let interactor: GoalListInteractorProtocol
 
-    init(interactor: GoalListInteractorProtocol) {
+    init(interactor: GoalListInteractorProtocol, view: GoalListViewProtocol) {
         self.interactor = interactor
+        self.view = view
 
         interactor.fetchData().subscribe { event in
             switch event {

@@ -23,15 +23,37 @@ struct GoalListViewModel {
 }
 
 class ViewController: UIViewController {
-    let disposeBag = DisposeBag()
-    let repository = GoalsRepository(manager: GoalsApiManager(httpClient: HTTPNetwork.instance),
-                                     managedObjectContext: CoreDataStack.instance.persistentContainer.viewContext)
+    @IBOutlet var tableView: UITableView!
+
+    var items = [GoalListViewModel]()
+    var presenter: GoalListPresenter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        repository.loadGoals().subscribe { event in
-        }.disposed(by: disposeBag)
+        let manager = GoalsApiManager(httpClient: HTTPNetwork.instance)
+        let repository = GoalsRepository(manager: manager, managedObjectContext: CoreDataStack.instance.persistentContainer.viewContext)
+        let interactor = GoalListInteractor(repository: repository)
+        presenter = GoalListPresenter(interactor: interactor, view: self)
     }
 }
 
+extension ViewController: GoalListViewProtocol {
+    func refreshData(items: [GoalListViewModel]) {
+        self.items = items
+        tableView.reloadData()
+    }
+}
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        items.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GoalCell") as! GoalCell
+        cell.configure(with: items[indexPath.row])
+
+        return cell
+    }
+}
