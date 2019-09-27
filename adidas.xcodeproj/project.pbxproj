@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1850D27160DDE3ED2BC76F34 /* GoalEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850DFA8A3CAA99A766E8116 /* GoalEntity.swift */; };
+		1850D65CBC967F3CC540DB81 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850DEDA986E2A0125E53A51 /* CoreDataStack.swift */; };
+		1850DEBE523F6F3A6AFC1FF7 /* GoalsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D25B761D8F52757B2226 /* GoalsRepository.swift */; };
 		1850DFFC687303FB97040FB3 /* GoalApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D83F51F4818E64607CE4 /* GoalApiManager.swift */; };
 		38A5E8F2BEA6AD477600FC3D /* Pods_adidas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32551EE50CE40E3D3580CA06 /* Pods_adidas.framework */; };
 		57D3C6C2233E80C4005B1C1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D3C6C1233E80C4005B1C1A /* AppDelegate.swift */; };
@@ -32,7 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1850D25B761D8F52757B2226 /* GoalsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsRepository.swift; sourceTree = "<group>"; };
 		1850D83F51F4818E64607CE4 /* GoalApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalApiManager.swift; sourceTree = "<group>"; };
+		1850DEDA986E2A0125E53A51 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		1850DFA8A3CAA99A766E8116 /* GoalEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalEntity.swift; sourceTree = "<group>"; };
 		20C5CE9E5E1C56BB98E96E8F /* Pods-adidasTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adidasTests.release.xcconfig"; path = "Target Support Files/Pods-adidasTests/Pods-adidasTests.release.xcconfig"; sourceTree = "<group>"; };
 		32551EE50CE40E3D3580CA06 /* Pods_adidas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_adidas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +120,8 @@
 				57D3C6CA233E80C4005B1C1A /* adidas.xcdatamodeld */,
 				1850D83F51F4818E64607CE4 /* GoalApiManager.swift */,
 				1850DFA8A3CAA99A766E8116 /* GoalEntity.swift */,
+				1850D25B761D8F52757B2226 /* GoalsRepository.swift */,
+				1850DEDA986E2A0125E53A51 /* CoreDataStack.swift */,
 			);
 			path = adidas;
 			sourceTree = "<group>";
@@ -315,6 +321,8 @@
 				57D3C6C4233E80C4005B1C1A /* SceneDelegate.swift in Sources */,
 				1850DFFC687303FB97040FB3 /* GoalApiManager.swift in Sources */,
 				1850D27160DDE3ED2BC76F34 /* GoalEntity.swift in Sources */,
+				1850DEBE523F6F3A6AFC1FF7 /* GoalsRepository.swift in Sources */,
+				1850D65CBC967F3CC540DB81 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

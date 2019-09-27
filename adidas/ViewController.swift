@@ -8,13 +8,20 @@
 
 import UIKit
 
+import RxCocoa
+import RxSwift
+import HTTPNetworking
+
 class ViewController: UIViewController {
+    let disposeBag = DisposeBag()
+    let repository = GoalsRepository(manager: GoalsApiManager(httpClient: HTTPNetwork.instance),
+                                     managedObjectContext: CoreDataStack.instance.persistentContainer.viewContext)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        repository.loadGoals().subscribe { event in
+        }.disposed(by: disposeBag)
     }
-
-
 }
 

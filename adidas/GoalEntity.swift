@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import CoreData
 
 enum GoalEntityType: String, Decodable {
     case step
@@ -17,4 +18,16 @@ struct GoalEntity: Decodable {
     let description: String?
     let type: GoalEntityType?
     let goal: Int?
+}
+
+extension Goal {
+    func configure(with model: GoalEntity) {
+        id = model.id
+        title = model.title
+        descriptionSwift = model.description
+        type = model.type?.rawValue
+        goal = model.goal.map {
+            NSNumber(value: $0)
+        }
+    }
 }

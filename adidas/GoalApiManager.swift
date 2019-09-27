@@ -13,12 +13,16 @@ enum ApiError: Error {
     case responseNotValid
 }
 
-class GoalsApiManager {
+protocol GoalsApiManagerProtocol {
+    func loadGoals() -> Single<[GoalEntity]>
+}
+
+class GoalsApiManager: GoalsApiManagerProtocol {
     enum Constants {
         static let path = "https://thebigachallenge.appspot.com/_ah/api/myApi/v1/goals"
     }
 
-    let httpClient: HTTPProtocol
+    private let httpClient: HTTPProtocol
 
     init(httpClient: HTTPProtocol) {
         self.httpClient = httpClient
@@ -34,18 +38,19 @@ class GoalsApiManager {
             var request = URLRequest(url: url)
             request.method = .GET
 
-            let task = self.httpClient.load(request) { data, response, error in
+            let task = self.httpClient.loadJSON(request) { json, response, error in
                 if let error = error {
                     event(.error(error))
                     return
                 }
 
-                guard let data = data else {
+                guard let items = (json as? [String: Any])?["items"] as? [[String: Any]] else {
                     event(.error(ApiError.responseNotValid))
                     return
                 }
 
                 do {
+                    let data = try JSONSerialization.data(withJSONObject: items, options: .prettyPrinted)
                     let decoded = try JSONDecoder().decode([GoalEntity].self, from: data)
                     event(.success(decoded))
                 } catch {
