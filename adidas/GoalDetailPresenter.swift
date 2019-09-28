@@ -48,7 +48,7 @@ class GoalDetailPresenter {
             return
         }
 
-        view?.refresh(value: "\(value / Double(goal))%")
+        view?.refresh(value: String(format:"%.2f%%", value / Double(goal)))
     }
 
     private func handleError() {
