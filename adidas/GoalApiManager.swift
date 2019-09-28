@@ -8,9 +8,12 @@ import RxSwift
 import RxCocoa
 import HTTPNetworking
 
-enum ApiError: Error {
-    case notValidUrl
-    case responseNotValid
+enum Const {
+    enum InternalError: Error {
+        case notValidUrl
+        case responseNotValid
+        case healthKit
+    }
 }
 
 protocol GoalsApiManagerProtocol {
@@ -31,7 +34,7 @@ class GoalsApiManager: GoalsApiManagerProtocol {
     func loadGoals() -> Single<[GoalEntity]> {
         Single.create { event in
             guard let url = URL(string: Constants.path) else {
-                event(.error(ApiError.notValidUrl))
+                event(.error(Const.InternalError.notValidUrl))
                 return Disposables.create()
             }
 
@@ -45,7 +48,7 @@ class GoalsApiManager: GoalsApiManagerProtocol {
                 }
 
                 guard let items = (json as? [String: Any])?["items"] as? [[String: Any]] else {
-                    event(.error(ApiError.responseNotValid))
+                    event(.error(Const.InternalError.responseNotValid))
                     return
                 }
 

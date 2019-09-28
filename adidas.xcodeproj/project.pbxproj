@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1850D0CF71E9820A0B199AB9 /* GoalDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D333CADBAEF34D67D853 /* GoalDetailInteractor.swift */; };
 		1850D176A446B773DB8F67E4 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850DBE9A3E399DEC9BCBD79 /* GoalCell.swift */; };
 		1850D24EA63C4658AD3B67B1 /* GoalListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D6284D246C651DF7754D /* GoalListInteractor.swift */; };
 		1850D27160DDE3ED2BC76F34 /* GoalEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850DFA8A3CAA99A766E8116 /* GoalEntity.swift */; };
 		1850D2FA329609D35F4A8C1F /* GoalListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D05BCBE84159477F87A7 /* GoalListPresenter.swift */; };
 		1850D65CBC967F3CC540DB81 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850DEDA986E2A0125E53A51 /* CoreDataStack.swift */; };
+		1850D760C6DD9858BEBAA9AB /* GoalDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850DB5F771E162EF72246E2 /* GoalDetailPresenter.swift */; };
 		1850DEBE523F6F3A6AFC1FF7 /* GoalsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D25B761D8F52757B2226 /* GoalsRepository.swift */; };
 		1850DFFC687303FB97040FB3 /* GoalApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D83F51F4818E64607CE4 /* GoalApiManager.swift */; };
 		38A5E8F2BEA6AD477600FC3D /* Pods_adidas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32551EE50CE40E3D3580CA06 /* Pods_adidas.framework */; };
@@ -41,8 +43,10 @@
 /* Begin PBXFileReference section */
 		1850D05BCBE84159477F87A7 /* GoalListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalListPresenter.swift; sourceTree = "<group>"; };
 		1850D25B761D8F52757B2226 /* GoalsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsRepository.swift; sourceTree = "<group>"; };
+		1850D333CADBAEF34D67D853 /* GoalDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalDetailInteractor.swift; sourceTree = "<group>"; };
 		1850D6284D246C651DF7754D /* GoalListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalListInteractor.swift; sourceTree = "<group>"; };
 		1850D83F51F4818E64607CE4 /* GoalApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalApiManager.swift; sourceTree = "<group>"; };
+		1850DB5F771E162EF72246E2 /* GoalDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalDetailPresenter.swift; sourceTree = "<group>"; };
 		1850DBE9A3E399DEC9BCBD79 /* GoalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
 		1850DEDA986E2A0125E53A51 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		1850DFA8A3CAA99A766E8116 /* GoalEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalEntity.swift; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 				1850D6284D246C651DF7754D /* GoalListInteractor.swift */,
 				1850DBE9A3E399DEC9BCBD79 /* GoalCell.swift */,
 				57D3C6E9233F6CD7005B1C1A /* DetailViewController.swift */,
+				1850D333CADBAEF34D67D853 /* GoalDetailInteractor.swift */,
+				1850DB5F771E162EF72246E2 /* GoalDetailPresenter.swift */,
 			);
 			path = adidas;
 			sourceTree = "<group>";
@@ -344,6 +350,8 @@
 				1850D2FA329609D35F4A8C1F /* GoalListPresenter.swift in Sources */,
 				1850D24EA63C4658AD3B67B1 /* GoalListInteractor.swift in Sources */,
 				1850D176A446B773DB8F67E4 /* GoalCell.swift in Sources */,
+				1850D0CF71E9820A0B199AB9 /* GoalDetailInteractor.swift in Sources */,
+				1850D760C6DD9858BEBAA9AB /* GoalDetailPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
