@@ -9,13 +9,16 @@
 import UIKit
 import HealthKit
 
-class DetailViewController: UIViewController {
+protocol DetailViewProtocol: class {
+    func refresh(value: String)
+}
+
+class DetailViewController: UIViewController, DetailViewProtocol {
+    @IBOutlet var progressLabel: UILabel!
+
     var presenter: GoalDetailPresenter!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        let interactor = GoalDetailInteractor()
-        presenter = GoalDetailPresenter(interactor: interactor)
+    func refresh(value: String) {
+        progressLabel.text = value
     }
 }

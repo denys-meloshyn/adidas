@@ -34,7 +34,8 @@ class ViewController: UIViewController {
         let manager = GoalsApiManager(httpClient: HTTPNetwork.instance)
         let repository = GoalsRepository(manager: manager, managedObjectContext: CoreDataStack.instance.persistentContainer.viewContext)
         let interactor = GoalListInteractor(repository: repository)
-        presenter = GoalListPresenter(interactor: interactor, view: self)
+        let router = GoalListRouter(viewController: self)
+        presenter = GoalListPresenter(interactor: interactor, view: self, router: router)
     }
 }
 
@@ -60,7 +61,7 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let v = storyboard?.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
-        navigationController?.pushViewController(v, animated: true)
+        tableView.deselectRow(at: indexPath, animated: false)
+        presenter.handleSelection(row: indexPath.row)
     }
 }

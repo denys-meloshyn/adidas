@@ -21,7 +21,7 @@ class GoalDetailInteractor: GoalDetailInteractorProtocol {
                 throw Const.InternalError.healthKit
             }
 
-            return self.read(quantityType: stepsQuantityType)
+            return self.read(quantityType: stepsQuantityType, unit: HKUnit.count()).observeOn(MainScheduler.instance)
         }
     }
 
@@ -31,11 +31,11 @@ class GoalDetailInteractor: GoalDetailInteractorProtocol {
                 throw Const.InternalError.healthKit
             }
 
-            return self.read(quantityType: stepsQuantityType)
+            return self.read(quantityType: stepsQuantityType, unit: HKUnit.meter()).observeOn(MainScheduler.instance)
         }
     }
 
-    private func read(quantityType: HKQuantityType) -> Single<Double> {
+    private func read(quantityType: HKQuantityType, unit: HKUnit) -> Single<Double> {
         Single.create { event in
             let healthStore = HKHealthStore()
 
@@ -49,7 +49,7 @@ class GoalDetailInteractor: GoalDetailInteractorProtocol {
                     return
                 }
 
-                event(.success(sum.doubleValue(for: HKUnit.count())))
+                event(.success(sum.doubleValue(for: unit)))
             }
 
             healthStore.execute(query)

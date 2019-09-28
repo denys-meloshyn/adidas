@@ -97,9 +97,24 @@
                     <view key="view" contentMode="scaleToFill" id="QGr-Zr-B2P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5p-kh-2qL">
+                                <rect key="frame" x="194.5" y="442.5" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="S5p-kh-2qL" firstAttribute="centerY" secondItem="7my-by-9O8" secondAttribute="centerY" id="OCL-fT-j8O"/>
+                            <constraint firstItem="S5p-kh-2qL" firstAttribute="centerX" secondItem="7my-by-9O8" secondAttribute="centerX" id="uwO-Cg-9Wm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7my-by-9O8"/>
                     </view>
+                    <connections>
+                        <outlet property="progressLabel" destination="S5p-kh-2qL" id="zOS-3d-o1c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pi7-o8-VTy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

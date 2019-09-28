@@ -8,19 +8,27 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-class GoalListPresenter {
+protocol GoalListPresenterProtocol {
+    func handleSelection(row: Int)
+}
+
+class GoalListPresenter: GoalListPresenterProtocol {
+    private var items = [GoalEntity]()
     private let disposeBag = DisposeBag()
+    private let router: GoalListRouterProtocol
     private weak var view: GoalListViewProtocol?
     private let interactor: GoalListInteractorProtocol
 
-    init(interactor: GoalListInteractorProtocol, view: GoalListViewProtocol) {
-        self.interactor = interactor
+    init(interactor: GoalListInteractorProtocol, view: GoalListViewProtocol, router: GoalListRouterProtocol) {
         self.view = view
+        self.router = router
+        self.interactor = interactor
 
-        interactor.fetchData().subscribe { event in
+        interactor.fetchData().subscribe { [weak self] event in
             switch event {
             case .next(let items):
-                self.view?.refreshData(items: items.map { entity -> GoalListViewModel in
+                self?.items = items
+                self?.view?.refreshData(items: items.map { entity -> GoalListViewModel in
                     let color: UIColor
                     switch (entity.type ?? .step) {
                     case .step:
@@ -40,5 +48,9 @@ class GoalListPresenter {
                 break
             }
         }.disposed(by: disposeBag)
+    }
+
+    func handleSelection(row: Int) {
+        router.openDetail(model: items[row])
     }
 }
