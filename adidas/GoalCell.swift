@@ -13,5 +13,6 @@ class GoalCell: UITableViewCell {
     func configure(with model: GoalListViewModel) {
         titleLabel.text = model.title
         descriptionLabel.text = model.description
+        typeView.backgroundColor = model.type
     }
 }

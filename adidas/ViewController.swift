@@ -19,7 +19,7 @@ protocol GoalListViewProtocol: class {
 struct GoalListViewModel {
     let title: String
     let description: String
-    let type: String
+    let type: UIColor
 }
 
 class ViewController: UIViewController {
@@ -55,5 +55,12 @@ extension ViewController: UITableViewDataSource {
         cell.configure(with: items[indexPath.row])
 
         return cell
+    }
+}
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let v = storyboard?.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
+        navigationController?.pushViewController(v, animated: true)
     }
 }

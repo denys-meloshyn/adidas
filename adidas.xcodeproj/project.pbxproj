@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,8 @@
 		57D3C6CE233E80C6005B1C1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57D3C6CD233E80C6005B1C1A /* Assets.xcassets */; };
 		57D3C6D1233E80C6005B1C1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57D3C6CF233E80C6005B1C1A /* LaunchScreen.storyboard */; };
 		57D3C6DC233E80C7005B1C1A /* adidasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D3C6DB233E80C7005B1C1A /* adidasTests.swift */; };
+		57D3C6E8233F6C0F005B1C1A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D3C6E7233F6C0F005B1C1A /* HealthKit.framework */; };
+		57D3C6EA233F6CD7005B1C1A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D3C6E9233F6CD7005B1C1A /* DetailViewController.swift */; };
 		8BC2EF9267FD9B9FA6328FFC /* Pods_adidasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52C7B15F21D953766F3CF85 /* Pods_adidasTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,9 @@
 		57D3C6D7233E80C7005B1C1A /* adidasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = adidasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D3C6DB233E80C7005B1C1A /* adidasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adidasTests.swift; sourceTree = "<group>"; };
 		57D3C6DD233E80C7005B1C1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57D3C6E6233F6C0E005B1C1A /* adidas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = adidas.entitlements; sourceTree = "<group>"; };
+		57D3C6E7233F6C0F005B1C1A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		57D3C6E9233F6CD7005B1C1A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B52C7B15F21D953766F3CF85 /* Pods_adidasTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_adidasTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D71D510EC0F6350FE174E5 /* Pods-adidas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adidas.release.xcconfig"; path = "Target Support Files/Pods-adidas/Pods-adidas.release.xcconfig"; sourceTree = "<group>"; };
 		C95BE72FCFA938F0630E52FC /* Pods-adidas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adidas.debug.xcconfig"; path = "Target Support Files/Pods-adidas/Pods-adidas.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38A5E8F2BEA6AD477600FC3D /* Pods_adidas.framework in Frameworks */,
+				57D3C6E8233F6C0F005B1C1A /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +93,7 @@
 		19B391C111D90BDCB167266C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				57D3C6E7233F6C0F005B1C1A /* HealthKit.framework */,
 				32551EE50CE40E3D3580CA06 /* Pods_adidas.framework */,
 				B52C7B15F21D953766F3CF85 /* Pods_adidasTests.framework */,
 			);
@@ -116,6 +123,7 @@
 		57D3C6C0233E80C4005B1C1A /* adidas */ = {
 			isa = PBXGroup;
 			children = (
+				57D3C6E6233F6C0E005B1C1A /* adidas.entitlements */,
 				57D3C6C1233E80C4005B1C1A /* AppDelegate.swift */,
 				57D3C6C3233E80C4005B1C1A /* SceneDelegate.swift */,
 				57D3C6C5233E80C4005B1C1A /* ViewController.swift */,
@@ -131,6 +139,7 @@
 				1850D05BCBE84159477F87A7 /* GoalListPresenter.swift */,
 				1850D6284D246C651DF7754D /* GoalListInteractor.swift */,
 				1850DBE9A3E399DEC9BCBD79 /* GoalCell.swift */,
+				57D3C6E9233F6CD7005B1C1A /* DetailViewController.swift */,
 			);
 			path = adidas;
 			sourceTree = "<group>";
@@ -152,7 +161,6 @@
 				FCE62EE6E2A38D21CA1F5647 /* Pods-adidasTests.debug.xcconfig */,
 				20C5CE9E5E1C56BB98E96E8F /* Pods-adidasTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -327,6 +335,7 @@
 				57D3C6C6233E80C4005B1C1A /* ViewController.swift in Sources */,
 				57D3C6CC233E80C4005B1C1A /* adidas.xcdatamodeld in Sources */,
 				57D3C6C2233E80C4005B1C1A /* AppDelegate.swift in Sources */,
+				57D3C6EA233F6CD7005B1C1A /* DetailViewController.swift in Sources */,
 				57D3C6C4233E80C4005B1C1A /* SceneDelegate.swift in Sources */,
 				1850DFFC687303FB97040FB3 /* GoalApiManager.swift in Sources */,
 				1850D27160DDE3ED2BC76F34 /* GoalEntity.swift in Sources */,
@@ -495,6 +504,7 @@
 			baseConfigurationReference = C95BE72FCFA938F0630E52FC /* Pods-adidas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = adidas/adidas.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ZT9N5NKNU;
 				INFOPLIST_FILE = adidas/Info.plist;
@@ -514,6 +524,7 @@
 			baseConfigurationReference = C7D71D510EC0F6350FE174E5 /* Pods-adidas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = adidas/adidas.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ZT9N5NKNU;
 				INFOPLIST_FILE = adidas/Info.plist;

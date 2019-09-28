@@ -21,9 +21,19 @@ class GoalListPresenter {
             switch event {
             case .next(let items):
                 self.view?.refreshData(items: items.map { entity -> GoalListViewModel in
-                    GoalListViewModel(title: entity.title ?? "",
-                                      description: entity.description ?? "",
-                                      type: entity.type?.rawValue ?? "")
+                    let color: UIColor
+                    switch (entity.type ?? .step) {
+                    case .step:
+                        color = .orange
+                    case .walkingDistance:
+                        color = .green
+                    case .runningDistance:
+                        color = .purple
+                    }
+
+                    return GoalListViewModel(title: entity.title ?? "",
+                                             description: entity.description ?? "",
+                                             type: color)
                 })
 
             default:
