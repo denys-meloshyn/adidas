@@ -8,7 +8,7 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-protocol GoalListPresenterProtocol {
+protocol GoalListPresenterProtocol: AutoMockable {
     func handleSelection(row: Int)
 }
 

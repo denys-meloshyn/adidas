@@ -9,6 +9,7 @@ target 'adidas' do
   pod 'HTTPNetworking', :git => 'https://github.com/ned1988/HttpNetworking.git'
   pod 'RxSwift', '5.0.0'
   pod 'RxCocoa', '5.0.0'
+  pod 'Sourcery', '0.17'
 
   target 'adidasTests' do
     inherit! :search_paths

@@ -6,17 +6,20 @@ PODS:
   - RxRelay (5.0.0):
     - RxSwift (~> 5)
   - RxSwift (5.0.0)
+  - Sourcery (0.17.0)
 
 DEPENDENCIES:
   - HTTPNetworking (from `https://github.com/ned1988/HttpNetworking.git`)
   - RxCocoa (= 5.0.0)
   - RxSwift (= 5.0.0)
+  - Sourcery (= 0.17)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - RxCocoa
     - RxRelay
     - RxSwift
+    - Sourcery
 
 EXTERNAL SOURCES:
   HTTPNetworking:
@@ -32,7 +35,8 @@ SPEC CHECKSUMS:
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  Sourcery: 3ed61be7c8a1218fce349266139379dba477efe0
 
-PODFILE CHECKSUM: 61a1b8df2dfd3dbc247e21bceadd39b573eaa647
+PODFILE CHECKSUM: 418d1c9d0d9cc3be3c2b14df88cc1c244de80fd4
 
 COCOAPODS: 1.7.5

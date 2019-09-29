@@ -8,6 +8,8 @@ import RxSwift
 import RxCocoa
 import HTTPNetworking
 
+protocol AutoMockable {}
+
 enum Const {
     enum InternalError: Error {
         case notValidUrl

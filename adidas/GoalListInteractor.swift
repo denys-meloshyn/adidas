@@ -9,7 +9,7 @@ import RxSwift
 import RxCocoa
 import CoreData
 
-protocol GoalListInteractorProtocol {
+protocol GoalListInteractorProtocol: AutoMockable {
     func fetchData() -> Observable<[GoalEntity]>
 }
 
