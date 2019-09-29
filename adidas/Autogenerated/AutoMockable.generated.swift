@@ -64,3 +64,43 @@ class GoalListPresenterProtocolMock: GoalListPresenterProtocol {
     }
 
 }
+class GoalListRouterProtocolMock: GoalListRouterProtocol {
+
+    //MARK: - openDetail
+
+    var openDetailModelCallsCount = 0
+    var openDetailModelCalled: Bool {
+        return openDetailModelCallsCount > 0
+    }
+    var openDetailModelReceivedModel: GoalEntity?
+    var openDetailModelReceivedInvocations: [GoalEntity] = []
+    var openDetailModelClosure: ((GoalEntity) -> Void)?
+
+    func openDetail(model: GoalEntity) {
+        openDetailModelCallsCount += 1
+        openDetailModelReceivedModel = model
+        openDetailModelReceivedInvocations.append(model)
+        openDetailModelClosure?(model)
+    }
+
+}
+class GoalListViewProtocolMock: GoalListViewProtocol {
+
+    //MARK: - refreshData
+
+    var refreshDataItemsCallsCount = 0
+    var refreshDataItemsCalled: Bool {
+        return refreshDataItemsCallsCount > 0
+    }
+    var refreshDataItemsReceivedItems: [GoalListViewModel]?
+    var refreshDataItemsReceivedInvocations: [[GoalListViewModel]] = []
+    var refreshDataItemsClosure: (([GoalListViewModel]) -> Void)?
+
+    func refreshData(items: [GoalListViewModel]) {
+        refreshDataItemsCallsCount += 1
+        refreshDataItemsReceivedItems = items
+        refreshDataItemsReceivedInvocations.append(items)
+        refreshDataItemsClosure?(items)
+    }
+
+}

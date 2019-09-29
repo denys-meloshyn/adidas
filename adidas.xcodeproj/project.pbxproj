@@ -13,6 +13,7 @@
 		1850D27160DDE3ED2BC76F34 /* GoalEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850DFA8A3CAA99A766E8116 /* GoalEntity.swift */; };
 		1850D2FA329609D35F4A8C1F /* GoalListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D05BCBE84159477F87A7 /* GoalListPresenter.swift */; };
 		1850D65CBC967F3CC540DB81 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850DEDA986E2A0125E53A51 /* CoreDataStack.swift */; };
+		1850D70CAD991C446140A6F6 /* GoalListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850DA585956A56F5FF8E598 /* GoalListPresenterTests.swift */; };
 		1850D760C6DD9858BEBAA9AB /* GoalDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850DB5F771E162EF72246E2 /* GoalDetailPresenter.swift */; };
 		1850DEB53AAC97995E3C8EF4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850DF4C77531A0BD46594D7 /* Coordinator.swift */; };
 		1850DEBE523F6F3A6AFC1FF7 /* GoalsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D25B761D8F52757B2226 /* GoalsRepository.swift */; };
@@ -30,6 +31,7 @@
 		57D3C6E8233F6C0F005B1C1A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D3C6E7233F6C0F005B1C1A /* HealthKit.framework */; };
 		57D3C6EA233F6CD7005B1C1A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D3C6E9233F6CD7005B1C1A /* DetailViewController.swift */; };
 		57D3C6EE23409D34005B1C1A /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D3C6ED23409D34005B1C1A /* AutoMockable.generated.swift */; };
+		57D3C6F02340DEC0005B1C1A /* AutoEquatable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D3C6EF2340DEC0005B1C1A /* AutoEquatable.generated.swift */; };
 		8BC2EF9267FD9B9FA6328FFC /* Pods_adidasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52C7B15F21D953766F3CF85 /* Pods_adidasTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,7 @@
 		1850D6284D246C651DF7754D /* GoalListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalListInteractor.swift; sourceTree = "<group>"; };
 		1850D7075DEB50138E6C7C40 /* GoalListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalListRouter.swift; sourceTree = "<group>"; };
 		1850D83F51F4818E64607CE4 /* GoalApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalApiManager.swift; sourceTree = "<group>"; };
+		1850DA585956A56F5FF8E598 /* GoalListPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalListPresenterTests.swift; sourceTree = "<group>"; };
 		1850DB5F771E162EF72246E2 /* GoalDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalDetailPresenter.swift; sourceTree = "<group>"; };
 		1850DBE9A3E399DEC9BCBD79 /* GoalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
 		1850DEDA986E2A0125E53A51 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -73,6 +76,7 @@
 		57D3C6E7233F6C0F005B1C1A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		57D3C6E9233F6CD7005B1C1A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		57D3C6ED23409D34005B1C1A /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		57D3C6EF2340DEC0005B1C1A /* AutoEquatable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoEquatable.generated.swift; sourceTree = "<group>"; };
 		B52C7B15F21D953766F3CF85 /* Pods_adidasTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_adidasTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D71D510EC0F6350FE174E5 /* Pods-adidas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adidas.release.xcconfig"; path = "Target Support Files/Pods-adidas/Pods-adidas.release.xcconfig"; sourceTree = "<group>"; };
 		C95BE72FCFA938F0630E52FC /* Pods-adidas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adidas.debug.xcconfig"; path = "Target Support Files/Pods-adidas/Pods-adidas.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 			children = (
 				57D3C6DB233E80C7005B1C1A /* adidasTests.swift */,
 				57D3C6DD233E80C7005B1C1A /* Info.plist */,
+				1850DA585956A56F5FF8E598 /* GoalListPresenterTests.swift */,
 			);
 			path = adidasTests;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 		57D3C6EC23409CB5005B1C1A /* Autogenerated */ = {
 			isa = PBXGroup;
 			children = (
+				57D3C6EF2340DEC0005B1C1A /* AutoEquatable.generated.swift */,
 				57D3C6ED23409D34005B1C1A /* AutoMockable.generated.swift */,
 			);
 			path = Autogenerated;
@@ -218,6 +224,7 @@
 				57D3C6D3233E80C7005B1C1A /* Sources */,
 				57D3C6D4233E80C7005B1C1A /* Frameworks */,
 				57D3C6D5233E80C7005B1C1A /* Resources */,
+				4503F399257AE5C958E92B78 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -288,6 +295,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4503F399257AE5C958E92B78 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-adidasTests/Pods-adidasTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-adidasTests/Pods-adidasTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-adidasTests/Pods-adidasTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		57D3C6EB23409C8A005B1C1A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -303,7 +327,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Pods/Sourcery/bin/sourcery --sources ./adidas --templates  ./adidas/AutoMockable.stencil --output ./adidas/Autogenerated\n";
+			shellScript = "./Pods/Sourcery/bin/sourcery --sources ./adidas --templates ./Pods/Sourcery/Templates/AutoEquatable.stencil --sources ./adidas/AutoMockable.stencil --output ./adidas/Autogenerated\n";
 		};
 		8685CDA028C3EF8BBA558FCE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -373,6 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57D3C6F02340DEC0005B1C1A /* AutoEquatable.generated.swift in Sources */,
 				57D3C6C6233E80C4005B1C1A /* ViewController.swift in Sources */,
 				57D3C6CC233E80C4005B1C1A /* adidas.xcdatamodeld in Sources */,
 				57D3C6C2233E80C4005B1C1A /* AppDelegate.swift in Sources */,
@@ -398,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57D3C6DC233E80C7005B1C1A /* adidasTests.swift in Sources */,
+				1850D70CAD991C446140A6F6 /* GoalListPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

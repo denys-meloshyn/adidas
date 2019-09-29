@@ -12,7 +12,7 @@ enum GoalEntityType: String, Decodable {
     case runningDistance = "running_distance"
 }
 
-struct GoalEntity: Decodable {
+public struct GoalEntity: Decodable, AutoEquatable {
     let id: String?
     let title: String?
     let description: String?

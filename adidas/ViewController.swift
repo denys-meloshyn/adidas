@@ -12,11 +12,11 @@ import RxCocoa
 import RxSwift
 import HTTPNetworking
 
-protocol GoalListViewProtocol: class {
+protocol GoalListViewProtocol: class, AutoMockable {
     func refreshData(items: [GoalListViewModel])
 }
 
-struct GoalListViewModel {
+public struct GoalListViewModel: AutoEquatable {
     let title: String
     let description: String
     let type: UIColor

@@ -9,6 +9,7 @@ import RxCocoa
 import HTTPNetworking
 
 protocol AutoMockable {}
+protocol AutoEquatable {}
 
 enum Const {
     enum InternalError: Error {

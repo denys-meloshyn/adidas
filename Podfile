@@ -13,7 +13,9 @@ target 'adidas' do
 
   target 'adidasTests' do
     inherit! :search_paths
-    # Pods for testing
+
+    pod 'RxSwift', '5.0.0'
+    pod 'RxCocoa', '5.0.0'
   end
 
 end

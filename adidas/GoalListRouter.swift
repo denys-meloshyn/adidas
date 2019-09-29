@@ -5,7 +5,7 @@
 
 import UIKit
 
-protocol GoalListRouterProtocol {
+protocol GoalListRouterProtocol: AutoMockable {
     func openDetail(model: GoalEntity)
 }
 
