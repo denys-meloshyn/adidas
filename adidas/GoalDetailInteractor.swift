@@ -9,7 +9,7 @@ import HealthKit
 import RxSwift
 import RxCocoa
 
-protocol GoalDetailInteractorProtocol {
+protocol GoalDetailInteractorProtocol: AutoMockable {
     func steps() -> Single<Double>
     func walkingRunning() -> Single<Double>
 }

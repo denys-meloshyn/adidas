@@ -27,11 +27,11 @@
 		57D3C6CC233E80C4005B1C1A /* adidas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57D3C6CA233E80C4005B1C1A /* adidas.xcdatamodeld */; };
 		57D3C6CE233E80C6005B1C1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57D3C6CD233E80C6005B1C1A /* Assets.xcassets */; };
 		57D3C6D1233E80C6005B1C1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57D3C6CF233E80C6005B1C1A /* LaunchScreen.storyboard */; };
-		57D3C6DC233E80C7005B1C1A /* adidasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D3C6DB233E80C7005B1C1A /* adidasTests.swift */; };
 		57D3C6E8233F6C0F005B1C1A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D3C6E7233F6C0F005B1C1A /* HealthKit.framework */; };
 		57D3C6EA233F6CD7005B1C1A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D3C6E9233F6CD7005B1C1A /* DetailViewController.swift */; };
 		57D3C6EE23409D34005B1C1A /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D3C6ED23409D34005B1C1A /* AutoMockable.generated.swift */; };
 		57D3C6F02340DEC0005B1C1A /* AutoEquatable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D3C6EF2340DEC0005B1C1A /* AutoEquatable.generated.swift */; };
+		57D3C6F22340E116005B1C1A /* GoalDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D3C6F12340E116005B1C1A /* GoalDetailPresenterTests.swift */; };
 		8BC2EF9267FD9B9FA6328FFC /* Pods_adidasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52C7B15F21D953766F3CF85 /* Pods_adidasTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,13 +70,13 @@
 		57D3C6D0233E80C6005B1C1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57D3C6D2233E80C6005B1C1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57D3C6D7233E80C7005B1C1A /* adidasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = adidasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		57D3C6DB233E80C7005B1C1A /* adidasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adidasTests.swift; sourceTree = "<group>"; };
 		57D3C6DD233E80C7005B1C1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57D3C6E6233F6C0E005B1C1A /* adidas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = adidas.entitlements; sourceTree = "<group>"; };
 		57D3C6E7233F6C0F005B1C1A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		57D3C6E9233F6CD7005B1C1A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		57D3C6ED23409D34005B1C1A /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		57D3C6EF2340DEC0005B1C1A /* AutoEquatable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoEquatable.generated.swift; sourceTree = "<group>"; };
+		57D3C6F12340E116005B1C1A /* GoalDetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailPresenterTests.swift; sourceTree = "<group>"; };
 		B52C7B15F21D953766F3CF85 /* Pods_adidasTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_adidasTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D71D510EC0F6350FE174E5 /* Pods-adidas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adidas.release.xcconfig"; path = "Target Support Files/Pods-adidas/Pods-adidas.release.xcconfig"; sourceTree = "<group>"; };
 		C95BE72FCFA938F0630E52FC /* Pods-adidas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adidas.debug.xcconfig"; path = "Target Support Files/Pods-adidas/Pods-adidas.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,9 +166,9 @@
 		57D3C6DA233E80C7005B1C1A /* adidasTests */ = {
 			isa = PBXGroup;
 			children = (
-				57D3C6DB233E80C7005B1C1A /* adidasTests.swift */,
 				57D3C6DD233E80C7005B1C1A /* Info.plist */,
 				1850DA585956A56F5FF8E598 /* GoalListPresenterTests.swift */,
+				57D3C6F12340E116005B1C1A /* GoalDetailPresenterTests.swift */,
 			);
 			path = adidasTests;
 			sourceTree = "<group>";
@@ -327,7 +327,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Pods/Sourcery/bin/sourcery --sources ./adidas --templates ./Pods/Sourcery/Templates/AutoEquatable.stencil --sources ./adidas/AutoMockable.stencil --output ./adidas/Autogenerated\n";
+			shellScript = "./Pods/Sourcery/bin/sourcery --sources ./adidas --templates  --sources ./Pods/Sourcery/Templates/AutoEquatable.stencil ./adidas/AutoMockable.stencil  --output ./adidas/Autogenerated\n";
 		};
 		8685CDA028C3EF8BBA558FCE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -422,8 +422,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57D3C6DC233E80C7005B1C1A /* adidasTests.swift in Sources */,
 				1850D70CAD991C446140A6F6 /* GoalListPresenterTests.swift in Sources */,
+				57D3C6F22340E116005B1C1A /* GoalDetailPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

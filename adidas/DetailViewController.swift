@@ -9,7 +9,7 @@
 import UIKit
 import HealthKit
 
-protocol DetailViewProtocol: class {
+protocol DetailViewProtocol: class, AutoMockable {
     func refresh(value: String)
 }
 

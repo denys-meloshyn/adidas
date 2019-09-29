@@ -9,11 +9,6 @@ import RxCocoa
 @testable import adidas
 
 class GoalListPresenterTests: XCTestCase {
-    override func setUp() {
-        super.setUp()
-
-    }
-
     func testFetchApiFailed() {
         let view = GoalListViewProtocolMock()
         let router = GoalListRouterProtocolMock()
